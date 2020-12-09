@@ -79,7 +79,9 @@ public class Main {
         List<Stu> bbb = JSON.parseArray(s,Stu.class);
         System.out.println("---------");
         System.out.println(bbb);
-
+        System.out.println("====================");
+        Map<String,Stu> targetMap = stus.stream().collect(Collectors.toMap(k->k.getName(),k->k,(k1,k2)->k1));
+        System.out.println(targetMap);
     }
 
     @Data
